@@ -1,4 +1,4 @@
-FROM node:20-alpine as build-stage
+FROM --platform=linux/amd64 node:20-alpine as build-stage
 WORKDIR /app
 COPY package*.json ./
 RUN npm install
